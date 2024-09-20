@@ -1,0 +1,141 @@
+/* 
+
+Colors:
+- Yellow: hsl(47, 88%, 63%)
+- White: hsl(0, 0%, 100%)
+- Gray 500: hsl(0, 0%, 42%)
+- Gray 950: hsl(0, 0%, 7%)
+
+Typography:
+- Font-Family: Figtree
+    - Extra Bold - 24px (or 14px) - 150% line height - 0px letter spacing
+    - Medium - 16px (or 14px) - 150% line height - 0px letter spacing
+
+Spacing: 
+- 200: 16px
+- 150: 12px
+- 100: 8px
+- 50: 4px
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Spacing */
+    --200: 16px;
+    --150: 12px;
+    --100: 8px;
+    --50: 4px;
+
+    /* Colors */
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    /* grid-template-rows: 1fr; */
+
+    background-color: var(--yellow);
+    color: var(--gray-950);
+
+    width: 100vw;
+    min-height: 100svh;
+    overflow: hidden;
+    
+    font-family: "Figtree", sans-serif;
+    line-height: 150%;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+h1:hover {
+    color: var(--yellow);
+}
+
+h1, .learning, .name {
+    font-weight: 800;
+}
+
+
+.card {
+    /* width: 21rem; */
+    /* max-width: 90%; */
+    max-width: 360px;
+    /* figma desktop dimensions */
+    /* width: 384px; */
+    /* height: 582px; */
+    display: flex;
+    flex-direction: column;
+    padding: 24px; 
+
+    border-radius: 20px;
+    border: 2px solid var(--gray-950);
+    box-shadow: var(--100) var(--100) 0;
+
+    background-color: var(--white)
+}
+
+@media (max-width: 376px){
+    body {
+        overflow: hidden;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+    .card {
+        width: 315px;
+        margin: 0 var(--200);
+    }
+}
+
+.card-img {
+    border-radius: 10px;
+}
+
+.top {
+    margin: var(--150) 0;
+}
+
+.learning {
+    width: 60px;
+    padding: 5px 10px;
+    background-color: var(--yellow);
+
+    text-align: center;
+    font-size: 14px;
+    
+    border-radius: 5px;
+}
+
+.published, .description {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.description {
+    color: var(--gray-500);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: var(--150);
+}
+
+footer {
+    width: 100vw;
+    text-align: center;
+}
